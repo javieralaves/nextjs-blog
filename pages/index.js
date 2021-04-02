@@ -19,19 +19,20 @@ export default function Home({ allPostsData }) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
-      <section class="text-2xl text-gray-500 my-5">
-        <p>I'm a product designer, developer, and content creator, living in Berlin. Currently part of the product team at <a href="http://tribe.so/">Tribe</a>.</p>
+      <section className="text-lg text-gray-700 my-5">
+        <p>Frontend developer and designer, occasionally gaming and playing piano. Writing about design and code.</p>
+        <p className="mt-5">Working with <a href="http://tribe.so/">Tribe</a> on a platform for online communities.</p>
       </section>
       <section>
-        <h2 class="text-3xl font-bold my-5">Blog</h2>
+        <h2 className="text-3xl font-bold my-5">Blog</h2>
         <ul>
           {allPostsData.map(({ id, date, title }) => (
             <li key={id}>
               <Link href={`/posts/${id}`}>
-                <a class="text-2xl text-blue-500">{title}</a>
+                <a className="text-2xl text-blue-500">{title}</a>
               </Link>
               <br />
-              <div class="text-lg text-gray-500">
+              <div className="text-lg text-gray-500">
                 <Date dateString={date} />
               </div>
             </li>

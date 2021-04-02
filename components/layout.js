@@ -8,7 +8,7 @@ export const siteTitle = 'Javier Alaves'
 export default function Layout({ children, home }) {
   return (
     <div className="w-full flex flex-col">
-      <div className="max-w-3xl m-auto">
+      <div className="max-w-2xl m-auto pt-16">
         <Head>
           <link rel="icon" href="/favicon.ico" />
           <meta
@@ -28,13 +28,14 @@ export default function Layout({ children, home }) {
           {home ? (
             <>
               <Image
+                className="rounded-full"
                 priority
                 src="/images/profile.jpg"
                 height={144}
                 width={144}
                 alt={name}
               />
-              <h1 class="text-4xl font-extrabold my-5">{name}</h1>
+              <h1 className="text-4xl font-extrabold my-5">{name}</h1>
             </>
           ) : (
             <>
